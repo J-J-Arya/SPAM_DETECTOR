@@ -3,11 +3,11 @@ Spam or Ham ?
 This project contains two versions of a spam classifier. Below is a summary of how they differ:
 
 ✅ Key Differences
-Feature	                     Version 1                                                  	Version 2
+Feature	                     Version 1                                                     	Version 2
 Vectorizer Used	             TfidfVectorizer()	                                            CountVectorizer()
-Vectorizer Behavior	         Weighs words by importance (rarer words = higher weight)	    Counts raw word frequency (simpler)
-Logistic Regression	         Default (unbalanced)	                                        class_weight='balanced'
-Effect              	     May favor 'ham' due to imbalance	                            Balances spam and ham importance better
+Vectorizer Behavior	         Weighs words by importance (rarer words = higher weight)	      Counts raw word frequency (simpler)
+Logistic Regression	         Default (unbalanced)	                                          class_weight='balanced'
+Effect              	       May favor 'ham' due to imbalance	                              Balances spam and ham importance better
 
 ✅ Other Components
 Both versions use the same dataset (spam.csv + custom alien spam).
