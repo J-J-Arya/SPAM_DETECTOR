@@ -1,0 +1,24 @@
+Spam or Ham ?
+
+This project contains two versions of a spam classifier. Below is a summary of how they differ:
+
+✅ Key Differences
+Feature	                     Version 1                                                  	Version 2
+Vectorizer Used	             TfidfVectorizer()	                                            CountVectorizer()
+Vectorizer Behavior	         Weighs words by importance (rarer words = higher weight)	    Counts raw word frequency (simpler)
+Logistic Regression	         Default (unbalanced)	                                        class_weight='balanced'
+Effect              	     May favor 'ham' due to imbalance	                            Balances spam and ham importance better
+
+✅ Other Components
+Both versions use the same dataset (spam.csv + custom alien spam).
+
+Both use Streamlit for UI and follow the same app layout.
+
+The prediction and display logic is identical.
+
+📌 Summary
+The second version improves performance by:
+
+Using CountVectorizer for simpler and often more effective word representation.
+Handling class imbalance with class_weight='balanced' in Logistic Regression.
+These changes significantly boost spam detection — especially for uncommon or custom examples.
